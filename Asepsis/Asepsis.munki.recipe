@@ -26,6 +26,15 @@
 			<string>10.8</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>postinstall_script</key>
+			<string>#!/bin/bash
+
+/usr/local/bin/asepsisctl enable
+logger "munki -- Asepsis enabled"
+
+/usr/local/bin/asepsisctl migratein
+logger "munki -- Asepsis migration completed"
+			</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
