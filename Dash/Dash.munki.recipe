@@ -19,7 +19,40 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Dash is an API Documentation Browser and Code Snippet Manager. Dash helps you store snippets of code, as well as instantly search and browse documentation for almost any API you might use.</string>
+			<string>Dash is an API Documentation Browser and Code Snippet Manager. Dash helps you store snippets of code, as well as instantly search and browse documentation for almost any API you might use.
+			
+Documentation Browser Features:
+
+	•Offline Documentation: iOS, OS X, Man Pages, ActionScript, Akka, Android, Angular.js, Appcelerator Titanium, Arduino, Backbone.js, Boost, Bootstrap, Bourbon, C, C++, CakePHP, Cappuccino, Clojure, Cocos2D, Cocos2D-X, Cocos3D, CodeIgniter, CoffeeScript, Common Lisp, Compass, Corona, CSS, Django, Dojo Toolkit, Drupal, D3.js, Elixir, Emacs Lisp, Ember.js, Erlang, Express.js, ExtJS, Flask, Foundation (by Zurb), Git, GLib, Grails, Go, Groovy, Haskell, HTML, Java, JavaFX, JavaScript, Joomla, jQuery, jQuery Mobile, jQuery UI, Knockout.js, Kobold2D, Laravel, Less, Lua, Lo-Dash, Marionette.js, Meteor, MongoDB, Mono, MySQL, Node.js, OpenGL, Perl, PhoneGap, PHP, Play, PostgreSQL, Processing, Prototype.js, Puppet, Python, Qt, R, Redis, Ruby, Ruby on Rails, Sass, Scala, Sencha Touch, Sparrow, SproutCore, SQLite, SVG, Symfony, Tcl/Tk, Twisted, TYPO3, Underscore.js, Unity 3D, Vim, VMware vSphere, WordPress, Xamarin, Xojo, XSLT, XUL, Yii, YUI, Zend.
+
+	•Supports docsets generated using popular tools like Appledoc and Doxygen.
+	•Methods are conveniently shown in a special Table of Contents.
+	•Highlighted in-page search.	
+	•Save bookmarks of your most used documentation pages.	
+	•Create search profiles to easily switch between docsets.	
+	•Easily search specific docsets by defining keyword filters (e.g. start your query with "python:" to search only the Python documentation).	
+	•Integration plugins for: Xcode, Alfred, Quicksilver, LaunchBar, PopClip, AppCode, Sublime Text, Emacs, Vim, TextMate, Eclipse, Terminal, AppleScript.	
+	•Easily integrate with any other application using the "dash://" URL scheme or the "Look up in Dash" system service.	
+	•Fuzzy search. Don't let misspells get in your way.	
+	•Built for speed. Searching is almost instant.	
+	•Snippet Manager Features:	
+		-Collect snippets of code that you reuse often.	
+		-Sync by saving your library in Dropbox.	
+		-Over 80 syntaxes for code highlighting.	
+		-Variable Placeholders can be edited before pasting.	
+		-Abbreviations are expanded wherever you type them.	
+		-Special Snippet Placeholders:	
+			•@clipboard expands into the contents of the clipboard.	
+			•@cursor repositions the cursor after expansion.	
+			•@date expands into the current date.	
+			•time expands into the current time.	
+
+Other Features:	
+	•Retina-ready.	
+	•Multi-touch gestures.	
+	•Menu item or dock application, always one keyboard shortcut away.	
+	•Users that want to use Dash only as a Snippet Manager or Documentation Browser, can do so.
+			</string>
 			<key>display_name</key>
 			<string>Dash</string>
 			<key>name</key>
