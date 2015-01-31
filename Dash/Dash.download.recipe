@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Dash using their Sparkle feed.</string>
+	<string>Downloads the latest Dash release using their Sparkle feed.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.download.Dash</string>
 	<key>MinimumVersion</key>

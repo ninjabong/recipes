@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Dash release using their Sparkle feed, and imports into Munki.</string>
+	<string>Downloads the latest Dash release using their Sparkle feed, makes a dmg and then imports into Munki.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.munki.Dash</string>
 	<key>Input</key>
@@ -31,7 +31,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.ninjabong.download.Dash</string>
+	<string>com.github.ninjabong.pkg.Dash</string>
 	<key>Process</key>
 	<array>
 		<dict>

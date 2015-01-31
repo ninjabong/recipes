@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Installs the latest Dash release.</string>
+	<string>Downloads the latest Dash release using their Sparkle feed, builds a pkg and then installs via that pkg.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.install.Dash</string>
 	<key>Input</key>
