@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest AudioMate release using their Sparkle feed, verifies the Code Signature and then imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.ninjabong.munki.AudioMate</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AudioMate</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>AudioMate</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>Control all your audio devices from the status bar, receive system notifications when relevant events happen on your audio devices and more.
+			</string>
+			<key>display_name</key>
+			<string>AudioMate</string>
+			<key>minimum_os_version</key>
+			<string>10.7</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.ninjabong.download.AudioMate</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>munkiimport_appname</key>
+				<string>AudioMate.app</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
