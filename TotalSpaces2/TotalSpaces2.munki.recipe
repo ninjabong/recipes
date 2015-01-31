@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>TotalSpaces2</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>%NAME%</string>
+		<string>BinaryAge</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
