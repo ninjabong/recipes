@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>appcast_url</key>
-				<string>http://kapeli.com/Dash.xml</string>
+				<string>%SPARKLE_FEED_URL%</string>
 			</dict>
 		</dict>
 		<dict>
