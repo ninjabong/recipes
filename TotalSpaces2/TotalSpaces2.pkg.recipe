@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest TotalSpaces2 release using their Sparkle feed, and builds a binaryage</string>
+	<string>Downloads the latest TotalSpaces2 release using their Sparkle feed, and builds a pkg.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.pkg.TotalSpaces2</string>
 	<key>Input</key>

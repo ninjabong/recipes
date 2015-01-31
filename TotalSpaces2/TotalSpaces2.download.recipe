@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest TotalSpaces2 release using their Sparkle feed, unzips and verifies the Code Signature.</string>
+	<string>Downloads the latest TotalSpaces2 release using their Sparkle feed, and verifies the Code Signature.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.download.TotalSpaces2</string>
 	<key>MinimumVersion</key>
