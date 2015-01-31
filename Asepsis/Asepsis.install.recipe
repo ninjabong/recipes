@@ -24,7 +24,6 @@
 			<dict>
 				<key>pkg_path</key>
 				<string>%pathname%/%NAME%.pkg</string>
-				<false/>
 			</dict>
 		</dict>
 	</array>
