@@ -5,7 +5,7 @@
     <key>Description</key>
 	<string>Downloads the latest Dash release using their Sparkle feed, and imports into Munki.</string>
     <key>Identifier</key>
-	<string>com.github.ninjabong.munki.dash</string>
+	<string>com.github.ninjabong.munki.Dash</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
