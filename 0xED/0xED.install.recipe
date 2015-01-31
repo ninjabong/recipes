@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest 0xED release, un tar+bzips and copies to /Applications.</string>
+	<key>Identifier</key>
+	<string>com.github.ninjabong.install.0xED</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>0xED</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.mosen.download.0xED</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%</string>
+				<key>archive_format</key>
+				<string>tar_bzip2</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>Copier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
+				<key>destination_path</key>
+				<string>/Applications/%NAME%.app</string>
+				<key>overwrite</key>
+				<false/>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
