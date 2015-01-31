@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Dash release using their Sparkle feed, and builds a pkg.</string>
+	<string>Downloads the latest Dash release using their Sparkle feed, unzips, verifies the Code Signature and the builds a .pkg.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.pkg.Dash</string>
 	<key>Input</key>
@@ -17,15 +17,6 @@
 	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.app/Contents/Info.plist</string>
-			</dict>
-		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>PkgRootCreator</string>

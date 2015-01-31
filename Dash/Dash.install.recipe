@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Dash release using their Sparkle feed, builds a pkg and then installs via that pkg.</string>
+	<string>Downloads the latest Dash release using their Sparkle feed, unzips, verifies the Code Signature and copies to /Applications.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.install.Dash</string>
 	<key>Input</key>
@@ -14,16 +14,20 @@
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.ninjabong.pkg.Dash</string>
+	<string>com.github.ninjabong.download.Dash</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Processor</key>
-			<string>Installer</string>
+			<string>Copier</string>
 			<key>Arguments</key>
 			<dict>
-				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
+				<key>destination_path</key>
+				<string>/Applications/%NAME%.app</string>
+				<key>overwrite</key>
+				<false/>
 			</dict>
 		</dict>
 	</array>

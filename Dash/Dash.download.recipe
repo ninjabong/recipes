@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Dash release using their Sparkle feed.</string>
+	<string>Downloads the latest Dash release using their Sparkle feed, unzips and verifies the Code Signature.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.download.Dash</string>
 	<key>MinimumVersion</key>
@@ -44,12 +44,23 @@
 			<string>Unarchiver</string>
 			<key>Arguments</key>
 			<dict>
+				<key>archive_format</key>
+				<string>zip</string>
 				<key>archive_path</key>
 				<string>%pathname%</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%</string>
 				<key>purge_destination</key>
 				<false/>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.app/Contents/Info.plist</string>
 			</dict>
 		</dict>
 		<dict>

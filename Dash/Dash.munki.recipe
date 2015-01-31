@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Dash release using their Sparkle feed, makes a dmg and then imports into Munki.</string>
+	<string>Downloads the latest Dash release using their Sparkle feed, unzips, verifies the Code Signature, makes a dmg and then imports into Munki.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.munki.Dash</string>
 	<key>Input</key>
@@ -64,7 +64,7 @@ Other Features:
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.ninjabong.pkg.Dash</string>
+	<string>com.github.ninjabong.download.Dash</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -72,32 +72,14 @@ Other Features:
 			<string>Unarchiver</string>
 			<key>Arguments</key>
 			<dict>
+				<key>archive_format</key>
+				<string>zip</string>
 				<key>archive_path</key>
 				<string>%pathname%</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 				<key>purge_destination</key>
 				<false/>
-			</dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
-			<key>Arguments</key>
-			<dict>
-				<key>input_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
-				<key>requirement</key>
-				<string>anchor apple generic and identifier "com.kapeli.dash" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = S6W832GPM5)</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%//%NAME%/%NAME%.app/Contents/Info.plist</string>
 			</dict>
 		</dict>
 		<dict>
