@@ -64,35 +64,9 @@ Other Features:
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.ninjabong.download.Dash</string>
+	<string>com.github.ninjabong.dmg.Dash</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-			<key>Arguments</key>
-			<dict>
-				<key>archive_format</key>
-				<string>zip</string>
-				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>purge_destination</key>
-				<false/>
-			</dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>DmgCreator</string>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.dmg</string>
-			</dict>
-		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
