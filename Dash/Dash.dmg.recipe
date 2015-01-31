@@ -8,7 +8,7 @@
 	<string>com.github.ninjabong.dmg.Dash</string>
 	<key>Input</key>
 	<dict>
-		<key>Name</key>
+		<key>NAME</key>
 		<string>Dash</string>
 	</dict>
 	<key>MinimumVersion</key>
