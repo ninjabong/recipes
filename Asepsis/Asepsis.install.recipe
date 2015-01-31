@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Asepsis release dmg using their Sparkle feed, verifies the Code Signature and then installs via pkg.</string>
+	<string>Downloads the latest Asepsis release dmg using their Sparkle feed and then installs via pkg.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.install.Asepsis</string>
 	<key>Input</key>
