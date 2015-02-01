@@ -7,4 +7,5 @@ Recipes for autopkg - http://autopkg.github.io/autopkg/
 [Fission](http://rogueamoeba.com/fission) - fast &amp; lossless audio editing<br />
 [Nicecast](http://rogueamoeba.com/nicecast) - your own internet radio station<br />
 [OSXFUSE](https://osxfuse.github.io/) - the easiest and fastest way to create file systems for OS X<br />
+[SSHFS](https://osxfuse.github.io/) - adds ssh filesystems support  OSXFUSE<br />
 [TotalSpaces2](http://totalspaces.binaryage.com/) - the ultimate grid spaces manager for your Mac<br />
