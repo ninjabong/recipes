@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Fission release using their Sparkle feed, unzips and verifies the Code Signature.</string>
+	<string>Downloads the latest Fission release, unzips and verifies the Code Signature.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.download.Fission</string>
 	<key>MinimumVersion</key>

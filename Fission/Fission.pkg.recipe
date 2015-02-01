@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Fission release using their Sparkle feed, unzips, verifies the Code Signature and the builds a pkg.</string>
+	<string>Downloads the latest Fission release, unzips, verifies the Code Signature and the builds a pkg.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.pkg.Fission</string>
 	<key>Input</key>
