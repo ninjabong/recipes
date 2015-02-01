@@ -4,4 +4,6 @@ Recipes for autopkg - http://autopkg.github.io/autopkg/
 [Asepsis](http://asepsis.binaryage.com/) - a system utility for prevention of .DS_Store files<br />
 [AudioMate](http://audiomateapp.com/) - easy audio control for the Mac<br />
 [Dash](http://kapeli.com/dash) - offline API documentation and snippet manager<br />
+[Fission](http://rogueamoeba.com/fission) - fast &amp; lossless audio editing<br />
+[Nicecast](http://rogueamoeba.com/nicecast) - your own internet radio station<br />
 [TotalSpaces2](http://totalspaces.binaryage.com/) - the ultimate grid spaces manager for your Mac<br />
