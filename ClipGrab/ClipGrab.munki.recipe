@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest ClipGrab release dmg, verifies the Code Signature and then imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.ninjabong.munki.ClipGrab</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>ClipGrab</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>%NAME%</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>Utilities</string>
+			<key>description</key>
+			<string>ClipGrab is a free downloader and converter for YouTube, Vimeo, Metacafe, Dailymotion and many other online video sites.  It converts downloaded videos to MPEG4, MP3 or other formats in just one easy step.
+			</string>
+			<key>display_name</key>
+			<string>%NAME%</string>
+			<key>installs</key>
+			<array>
+				<dict>
+					<key>CFBundleIdentifier</key>
+					<string>de.clipgrab.ClipGrab</string>
+					<key>path</key>
+					<string>/Applications/ClipGrab.app</string>
+					<key>type</key>
+					<string>bundle</string>
+					<key>version_comparison_key</key>
+					<string>CFBundleVersion</string>
+				</dict>
+			</array>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.ninjabong.download.ClipGrab</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
