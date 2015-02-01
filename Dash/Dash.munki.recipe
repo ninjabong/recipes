@@ -18,6 +18,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Development</string>
 			<key>description</key>
 			<string>Dash is an API Documentation Browser and Code Snippet Manager. Dash helps you store snippets of code, as well as instantly search and browse documentation for almost any API you might use.
 			

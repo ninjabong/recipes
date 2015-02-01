@@ -18,6 +18,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Audio</string>
 			<key>description</key>
 			<string>Fission is a fast &amp; lossless audio editor for mp3/mp4 files.</string>
 			<key>display_name</key>

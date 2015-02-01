@@ -18,6 +18,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Audio</string>
 			<key>description</key>
 			<string>Control all your audio devices from the status bar, receive system notifications when relevant events happen on your audio devices and more.
 			</string>
