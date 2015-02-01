@@ -58,7 +58,7 @@
 					<key>version</key>
 					<string>%version%</string>
 					<key>id</key>
-					<string>com.binaryage.AudioMate</string>
+					<string>com.troikalabs.AudioMate</string>
 					<key>options</key>
 					<string>purge_ds_store</string>
 					<key>chown</key>
