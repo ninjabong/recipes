@@ -6,7 +6,7 @@ Recipes for autopkg - http://autopkg.github.io/autopkg/
 [ClipGrab](http://clipgrab.org) - a friendly downloader for YouTube and other sites<br />
 [Dash](http://kapeli.com/dash) - offline API documentation and snippet manager<br />
 [Fission](http://rogueamoeba.com/fission) - fast &amp; lossless audio editing<br />
-[IntelPowerGadget](https://software.intel.com/en-us/articles/intel-power-gadget-20) - processor power usage monitoring for Intel Core2+ or later CPUs.
+[IntelPowerGadget](https://software.intel.com/en-us/articles/intel-power-gadget-20) - processor power usage monitoring for Intel Core2+ or later CPUs<br />
 [Mumble](http://wiki.mumble.info/wiki/Main_Page) - an open source, low-latency, secure, high quality voice chat software<br />
 [Nicecast](http://rogueamoeba.com/nicecast) - your own internet radio station<br />
 [OBS](https:obsproject.com) - free, open source software for live streaming and recording<br />
