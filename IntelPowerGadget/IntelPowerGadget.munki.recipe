@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>We use another URLTextSearcher here to determine the version info since the pkg version doesn't match.</string>
+	<key>Description</key>
+	<string>Downloads the latest Intel Power Gadget Studio release, unzips the dmg and then imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.ninjabong.munki.IntelPowerGadget</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Intel Power Gadget</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>Intel</string>
+		<key>VERS_URL</key>
+		<string>https://software.intel.com/en-us/articles/intel-power-gadget-20</string>
+		<key>VERS_PATTERN</key>
+		<string>IntelPowerGadgetMac(.*?)\.zip</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>Utilities</string>
+			<key>description</key>
+			<string>Introduction
+
+Intel® Power Gadget is a software-based power usage monitoring tool enabled for 2nd Generation Intel® Core™ processors or later. It is supported on Windows* and Mac OS X* and includes an application, driver, and libraries to monitor and estimate real-time processor package power information in watts using the energy counters in the processor. With this release, we are providing functionality to evaluate power information on various platforms including notebooks, desktops and servers.
+
+Background
+
+Traditional methods to estimate power/energy usage of the processor has always been a cumbersome task that included special purpose tools or instrumentation on the platform along with third party equipment. The motivation for the tool was to assist end-users, ISV’s, OEM’s, developers, and others interested in a more precise estimation of power from a software level without any H/W instrumentation.      
+
+New Features
+
+In version 3.0 there are additional features that include estimation of power on multi-socket systems as well as externally callable APIs to extract power information within sections of code. The multi-socket support essentially evaluates the Energy MSR on a per-socket basis and provides an estimate of power draw per socket.  The API layer is a set of libraries and dlls that can be called and offers the flexibility to build the tool within code sections of an application.  
+			</string>
+			<key>display_name</key>
+			<string>%NAME%</string>
+			<key>minimum_os_version</key>
+			<string>10.6.0</string>
+			<key>name</key>
+			<string>IntelPowerGadget</string>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.ninjabong.download.IntelPowerGadget</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%VERS_URL%</string>
+				<key>re_pattern</key>
+				<string>%VERS_PATTERN%</string>
+				<key>result_output_var_name</key>
+				<string>VERS_MATCH</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/IntelÆ Power Gadget.dmg</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+				<key>additional_makepkginfo_options</key>
+				<array>
+					<string>--pkgvers=%VERS_MATCH%</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
