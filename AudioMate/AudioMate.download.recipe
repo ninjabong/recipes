@@ -6,8 +6,6 @@
 	<string>Downloads the latest AudioMate release using their Sparkle feed, and verifies the Code Signature.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.download.AudioMate</string>
-	<key>MinimumVersion</key>
-	<string>0.2.0</string>
 	<key>Input</key>
 	<dict>
 		<key>APP</key>
@@ -17,6 +15,8 @@
 		<key>SPARKLE_FEED_URL</key>
 		<string>http://backend.troikalabs.com/appcast/audiomate</string>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
 		<dict>

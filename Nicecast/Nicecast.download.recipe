@@ -6,8 +6,6 @@
 	<string>Downloads the latest Nicecast release, unzips and verifies the Code Signature.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.download.Nicecast</string>
-	<key>MinimumVersion</key>
-	<string>0.2.0</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -17,6 +15,8 @@
 		<key>USER_AGENT</key>
 		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
 		<dict>

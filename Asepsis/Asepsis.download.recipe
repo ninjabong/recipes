@@ -6,8 +6,6 @@
 	<string>Downloads the latest Asepsis release dmg using their Sparkle feed.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.download.Asepsis</string>
-	<key>MinimumVersion</key>
-	<string>0.2.0</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_PATH</key>
@@ -17,6 +15,8 @@
 		<key>SPARKLE_FEED_URL</key>
 		<string>http://updates-s3.binaryage.com/asepsis.xml</string>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
 		<dict>

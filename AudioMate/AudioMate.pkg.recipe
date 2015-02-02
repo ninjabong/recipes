@@ -13,10 +13,10 @@
 		<key>NAME</key>
 		<string>AudioMate</string>
 	</dict>
-	<key>ParentRecipe</key>
-	<string>com.github.ninjabong.download.AudioMate</string>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.ninjabong.download.AudioMate</string>
 	<key>Process</key>
 	<array>
 		<dict>

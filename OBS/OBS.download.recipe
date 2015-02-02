@@ -6,8 +6,6 @@
 	<string>Downloads the latest OBS Studio release dmg from GitHub.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.download.OBS</string>
-	<key>MinimumVersion</key>
-	<string>0.2.0</string>
 	<key>Input</key>
 	<dict>
 		<key>APP</key>
@@ -21,6 +19,8 @@
 		<key>SEARCH_PATTERN</key>
 		<string>(\d\.\d\.\d)/obs-(\1)-installer.dmg</string>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
 		<dict>

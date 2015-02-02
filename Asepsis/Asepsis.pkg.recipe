@@ -13,10 +13,10 @@
 		<key>NAME</key>
 		<string>Asepsis</string>
 	</dict>
-	<key>ParentRecipe</key>
-	<string>com.github.ninjabong.download.Asepsis</string>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.ninjabong.download.Asepsis</string>
 	<key>Process</key>
 	<array>
 		<dict>

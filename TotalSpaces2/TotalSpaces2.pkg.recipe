@@ -13,10 +13,10 @@
 		<key>NAME</key>
 		<string>TotalSpaces2</string>
 	</dict>
-	<key>ParentRecipe</key>
-	<string>com.github.ninjabong.download.TotalSpaces2</string>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.ninjabong.download.TotalSpaces2</string>
 	<key>Process</key>
 	<array>
 		<dict>

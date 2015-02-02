@@ -11,10 +11,10 @@
 		<key>NAME</key>
 		<string>0xED</string>
 	</dict>
-	<key>ParentRecipe</key>
-	<string>com.github.mosen.download.0xED</string>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.mosen.download.0xED</string>
 	<key>Process</key>
 	<array>
 		<dict>

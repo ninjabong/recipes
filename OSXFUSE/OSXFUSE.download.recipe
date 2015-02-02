@@ -6,8 +6,6 @@
 	<string>Downloads the latest OSXFUSE release dmg from SourceForge.</string>
 	<key>Identifier</key>
 	<string>com.github.ninjabong.download.OSXFUSE</string>
-	<key>MinimumVersion</key>
-	<string>0.2.0</string>
 	<key>Input</key>
 	<dict>
 		<key>FEED_URL</key>
@@ -15,6 +13,8 @@
 		<key>SEARCH_PATTERN</key>
 		<string>osxfuse-[0-9]\.[0-9]\.[0-9]</string>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
