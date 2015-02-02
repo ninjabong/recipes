@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest Mumble release dmg from SourceForge, determines the version and verifies the Code Signature.</string>
+	<key>Identifier</key>
+	<string>com.github.ninjabong.download.Mumble</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Mumble</string>
+		<key>FEED_URL</key>
+		<string>http://wiki.mumble.info/wiki/Main_Page</string>
+		<key>BASE_URL</key>
+		<string>http://sourceforge.net/projects/mumble/files</string>
+		<key>SEARCH_PATTERN</key>
+		<string>(\d\.\d\.\d)/%NAME%-(\1).dmg</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%FEED_URL%</string>
+				<key>re_pattern</key>
+				<string>%SEARCH_PATTERN%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%BASE_URL%/%NAME%/%match%/%NAME%-%match%.dmg/download</string>
+				<key>filename</key>
+				<string>%NAME%-%match%.dmg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pathname%/%NAME%.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleVersion</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/%NAME%.app</string>
+				<key>requirement</key>
+				<string>anchor apple generic and identifier "net.sourceforge.mumble.Mumble" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = CXBDCLUHDT)</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
