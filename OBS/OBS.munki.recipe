@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>We re-run the exact same URLTextSearcher Processor from the parent recipe since we need %match% from the original recipe for a version string since it's not inherited.</string>
 	<key>Description</key>
 	<string>Downloads the latest OBS Studio release dmg from GitHub, and then imports the mpkg into Munki.</string>
 	<key>Identifier</key>
