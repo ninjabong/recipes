@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest OBS Studio release dmg from GitHub.</string>
+	<key>Identifier</key>
+	<string>com.github.ninjabong.download.OBS</string>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>Input</key>
+	<dict>
+		<key>APP</key>
+		<string>%NAME%.app</string>
+		<key>NAME</key>
+		<string>OBS</string>
+		<key>BASE_URL</key>
+		<string>https://github.com/jp9000/obs-studio/releases/download</string>
+		<key>FEED_URL</key>
+		<string>https://obsproject.com</string>
+		<key>SEARCH_PATTERN</key>
+		<string>(\d\.\d\.\d)/obs-(\1)-installer.dmg</string>
+	</dict>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%FEED_URL%</string>
+				<key>re_pattern</key>
+				<string>%SEARCH_PATTERN%</string>
+				<!-- key>result_output_var_name</key>
+				<string>VERS</string -->
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%BASE_URL%/%match%/obs-%match%-installer.dmg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>

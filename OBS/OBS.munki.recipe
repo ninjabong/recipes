@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>We re-run the exact same URLTextSearcher Processor from the parent recipe since we need %match% from the original recipe for a version string since it's not inherited.</string>
+	<key>Description</key>
+	<string>Downloads the latest OBS Studio release dmg from GitHub, and then imports the mpkg into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.ninjabong.munki.OBS</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>OBS</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>OBS</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>OBS Studio is a rewrite of what was formerly known as Open Broadcaster Software, software originally designed for recording and streaming live video content, efficiently.  This also installs the companion SyphonInject.app.
+			</string>
+			<key>display_name</key>
+			<string>OBS Studio</string>
+			<key>minimum_os_version</key>
+			<string>10.8.5</string>
+			<key>name</key>
+			<string>%NAME%</string>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.ninjabong.download.OBS</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+				<key>additional_makepkginfo_options</key>
+				<array>
+					<string>--pkgvers=%match%</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
