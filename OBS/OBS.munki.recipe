@@ -20,6 +20,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Media</string>			
 			<key>description</key>
 			<string>OBS Studio is a rewrite of what was formerly known as Open Broadcaster Software, software originally designed for recording and streaming live video content, efficiently.  This also installs the companion SyphonInject.app.
 			</string>
@@ -48,7 +50,8 @@
 				<string>%MUNKI_REPO_SUBDIR%</string>
 				<key>additional_makepkginfo_options</key>
 				<array>
-					<string>--pkgvers=%match%</string>
+					<string>--pkgvers=%match
+						%</string>
 				</array>
 			</dict>
 		</dict>
