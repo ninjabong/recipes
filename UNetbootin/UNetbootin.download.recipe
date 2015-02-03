@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest UNetbootin release zip from SourceForge, determines the version, unzips and adds a CFBundleVersion key to Contents/Info.plist.</string>
+	<key>Identifier</key>
+	<string>com.github.ninjabong.download.UNetbootin</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>UNetbootin</string>
+		<key>SEARCH_URL</key>
+		<string>http://sourceforge.net/projects/unetbootin/files/</string>
+		<key>SEARCH_PATTERN</key>
+		<string>unetbootin-windows-(\d\d\d).exe</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%SEARCH_URL%</string>
+				<key>re_pattern</key>
+				<string>%SEARCH_PATTERN%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>http://unetbootin.sourceforge.net/unetbootin-mac-latest.zip</string>
+				<key>filename</key>
+				<string>%NAME%-%match%.zip</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_format</key>
+				<string>zip</string>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PlistEditor</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app/Contents/Info.plist</string>
+				<key>output_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app/Contents/Info.plist</string>
+				<key>plist_data</key>
+				<dict>
+					<key>CFBundleVersion</key>
+					<string>%match%</string>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

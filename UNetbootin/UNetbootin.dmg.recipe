@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest UNetbootin release zip from SourceForge, determines the version, unzips, adds a CFBundleVersion key to Contents/Info.plist and builds a dmg.</string>
+	<key>Identifier</key>
+	<string>com.github.ninjabong.dmg.UNetbootin</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>UNetbootin</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.ninjabong.download.UNetbootin</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>DmgCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_root</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%match%.dmg</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
