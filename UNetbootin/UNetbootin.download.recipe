@@ -56,7 +56,7 @@
 				<string>%pathname%</string>
 			</dict>
 		</dict>
-		<!-- dict>
+		<dict>
 			<key>Processor</key>
 			<string>PlistEditor</string>
 			<key>Arguments</key>
@@ -70,15 +70,6 @@
 					<key>CFBundleVersion</key>
 					<string>%match%</string>
 				</dict>
-			</dict>
-		</dict -->
-		<dict>
-			<key>Processor</key>
-			<string>MD5Summer</string>
-			<key>Arguments</key>
-			<dict>
-				<key>md5sum_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app/Contents/MacOS/unetbootin</string>
 			</dict>
 		</dict>
 	</array>
