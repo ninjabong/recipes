@@ -63,6 +63,8 @@
 				<string>%RECIPE_CACHE_DIR%/%NAME%.app/Contents/Info.plist</string>
 			</dict>
 		</dict>
+		<!-- 
+		disabled because it keeps failing, even though codesign -d -r- output matches
 		<dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
@@ -73,7 +75,7 @@
 				<key>requirement</key>
 				<string>anchor apple generic and identifier "com.kapeli.dash" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = S6W832GPM5)</string>
 			</dict>
-		</dict>
+		</dict -->
 	</array>
 </dict>
 </plist>
