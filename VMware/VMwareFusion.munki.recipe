@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest VMware Fusions release dmg from GitHub, and then imports the mpkg into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.ninjabong.munki.VMwareFusion</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>VMwareFusion</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>VMware</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>Virtualization</string>
+			<key>description</key>
+			<string>VMware Fusion allows you to create a Virtual Machine on your Mac and run Windows (including Windows 8.1) and Windows software on your Mac.</string>
+			<string>VMware</string>
+			<key>minimum_os_version</key>
+			<string>10.8.0</string>
+			<key>name</key>
+			<string>%NAME%</string>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.justinrummel.download.VMwareFusion</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
