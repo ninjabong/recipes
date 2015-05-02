@@ -33,7 +33,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.justinrummel.download.VMwareFusion</string>
+	<string>com.justinrummel.pkg.VMwareFusion</string>
 	<key>Process</key>
 	<array>
 		<dict>
