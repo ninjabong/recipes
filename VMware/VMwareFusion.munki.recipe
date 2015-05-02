@@ -22,6 +22,7 @@
 			<string>Virtualization</string>
 			<key>description</key>
 			<string>VMware Fusion allows you to create a Virtual Machine on your Mac and run Windows (including Windows 8.1) and Windows software on your Mac.</string>
+			<key>display_name</key>
 			<string>VMware</string>
 			<key>minimum_os_version</key>
 			<string>10.8.0</string>
