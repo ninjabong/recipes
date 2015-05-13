@@ -17,7 +17,7 @@
 		<key>FEED_URL</key>
 		<string>https://obsproject.com/download#mac</string>
 		<key>SEARCH_PATTERN</key>
-		<string>(\d\.\d\.\d)/obs-(\1)-installer.dmg</string>
+		<string>(\d\+.\d+\.\d+)/obs-(\1)-installer.dmg</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>

@@ -13,7 +13,7 @@
 		<key>FEED_URL</key>
 		<string>http://clipgrab.org/</string>
 		<key>SEARCH_PATTERN</key>
-		<string>ClipGrab-\d\.\d\.\d.*?dmg</string>
+		<string>ClipGrab-\d+\.\d+\.\d+.*?dmg</string>
 		<!-- string>ClipGrab-[0-9]\.[0-9]\.[0-9]</string -->
 	</dict>
 	<key>MinimumVersion</key>
